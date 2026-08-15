@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FESMP - 生命窃取服务器</title>
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --accent-color: #f1c40f;
+            --danger-color: #ff4d4d;
+            --success-color: #2ecc71;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=minecraft+landscape+epic+castle+cinematic&image_size=landscape_16_9');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            letter-spacing: 5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            padding: 20px;
+        }
+
+        .server-info {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .info-card p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '⚔️';
+            margin-right: 10px;
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .rule-item {
+            margin-bottom: 20px;
+        }
+
+        .rule-item h4 {
+            color: var(--accent-color);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .red-line {
+            color: var(--danger-color);
+            font-weight: bold;
+        }
+
+        .freedom {
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .punishment-box {
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px dashed #555;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #444;
+        }
+
+        th {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: var(--primary-color);
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        code {
+            background: #444;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FESMP</h1>
+        <p>⚔️ 生命窃取 · 强者为王 ⚔️</p>
+    </header>
+
+    <div class="container">
+        <div class="server-info">
+            <div class="info-card">
+                <h3>Java版连接</h3>
+                <p>9666.fun:23178</p>
+            </div>
+            <div class="info-card">
+                <h3>基岩版连接</h3>
+                <p>IP: 9666.fun | 端口: 23178</p>
+            </div>
+            <div class="info-card">
+                <h3>核心机制</h3>
+                <p>击杀窃取 1 颗心 (2点血量)</p>
+            </div>
+        </div>
+
+        <section id="rules">
+            <h2>服务器总则</h2>
+            <div class="rules-grid">
+                <div>
+                    <div class="rule-item">
+                        <h4 class="red-line">🚫 高压红线 (绝对禁止)</h4>
+                        <ul>
+                            <li><strong>作弊与辅助：</strong>禁止飞行、杀戮光环、加速、自动搭路、矿透(X-ray)、种子工具、卡假物品、玩家透视等。</li>
+                            <li><strong>内存发包：</strong>凡影响服务器正常发包和读取内存的 Mod 一律视为作弊。</li>
+                            <li><strong>性能破坏：</strong>禁止高频红石、过量实体堆叠、DDOS攻击或任何故意拉低 TPS 的行为。</li>
+                            <li><strong>出生点保护：</strong>出生点 300 格内严禁攻击/击杀，不得阻碍他人离开。</li>
+                            <li><strong>现实法律：</strong>禁止人肉、泄露隐私、涉政涉恐等言论。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="rule-item">
+                        <h4 class="freedom">✅ 自由领域 (管理不干预)</h4>
+                        <p>除上述红线外，玩家间的一切行为 —— <strong>战争、结盟、背叛、偷窃、破坏、陷阱</strong> —— 均由当事人自行承担后果。</p>
+                        <p>管理组不介入私人纠纷与私人交易。活下来，或是成为别人的血包。</p>
+                    </div>
+                    <div class="rule-item">
+                        <h4>⚖️ 处罚阶梯</h4>
+                        <div class="punishment-box">
+                            • 首次违规：警告记录<br>
+                            • H外挂：3×(c-1) + 12 小时<br>
+                            • H矿透：2×(c-1) + 6 小时<br>
+                            • 出生点杀人：警告后 H=1(c-2)+3 小时<br>
+                            • 恶意卡服：永久封禁
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands">
+            <h2>常用指令</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>指令</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>/tpa &lt;玩家&gt;</code></td><td>请求传送到玩家位置</td></tr>
+                    <tr><td><code>/tpahere &lt;玩家&gt;</code></td><td>请求玩家传送到你位置</td></tr>
+                    <tr><td><code>/tpaccept</code></td><td>接受传送请求</td></tr>
+                    <tr><td><code>/sethome</code></td><td>设置家</td></tr>
+                    <tr><td><code>/home</code></td><td>回到家</td></tr>
+                    <tr><td><code>/skin &lt;ID&gt;</code></td><td>更换正版皮肤</td></tr>
+                    <tr><td><code>/afk</code></td><td>标记离开状态</td></tr>
+                    <tr><td><code>/anvil</code></td><td>远程打开铁砧</td></tr>
+                    <tr><td><code>/feed</code></td><td>满足饥饿度</td></tr>
+                    <tr><td><code>/fly</code></td><td>开启飞行模式</td></tr>
+                    <tr><td><code>/god</code></td><td>无敌模式</td></tr>
+                    <tr><td><code>/invsee</code></td><td>查看玩家背包</td></tr>
+                    <tr><td><code>/near</code></td><td>查看附近玩家</td></tr>
+                    <tr><td><code>/nick</code></td><td>更改昵称</td></tr>
+                    <tr><td><code>/kit</code></td><td>领取新手/可用套件</td></tr>
+                    <tr><td><code>/helppop</code></td><td>向管理员求助</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="newbie">
+            <h2>新手指南</h2>
+            <p><strong>🎁 新手装备：</strong> 玩家可领取初始装备，但请注意：老玩家慎领，出问题不负责。</p>
+            <p><strong>⚖️ 法律信息：</strong> 请参见群文档 <a href="falv.html">法律信息</a>。</p>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 FESMP Server. All Rights Reserved. 🩸 活下来，或是成为别人的血包。
+    </footer>
+
+</body>
+</html>
