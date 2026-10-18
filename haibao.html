@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FESMP - 宣传海报</title>
+    <meta property="og:title" content="FESMP · 生命窃取 SMP 服务器">
+    <meta property="og:description" content="击杀窃取一点血量 · 浅管理无政府 · Java/基岩双版本互通">
+    <meta property="og:image" content="img/FESMP-视觉海报.png">
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --accent-color: #f1c40f;
+            --danger-color: #ff4d4d;
+            --success-color: #2ecc71;
+            --info-color: #3498db;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== 顶部头图 ===== */
+        .poster-hero {
+            width: 100%;
+            max-width: 720px;
+            display: block;
+            margin: 0 auto;
+            border-bottom: 4px solid var(--primary-color);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
+
+        .hero-wrap {
+            background:
+                radial-gradient(ellipse at top, rgba(231, 76, 60, 0.15), transparent 60%),
+                #111;
+            padding: 0;
+        }
+
+        /* ===== 主体内容 ===== */
+        .container {
+            max-width: 950px;
+            margin: 0 auto 50px;
+            padding: 30px 20px;
+        }
+
+        .slogan {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--danger-color);
+            letter-spacing: 3px;
+            margin: 10px 0 30px;
+            text-shadow: 0 0 20px rgba(255, 77, 77, 0.4);
+        }
+
+        .slogan small {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--text-color);
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin-top: 6px;
+            opacity: 0.8;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 35px 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* IP 信息卡片 */
+        .ip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: rgba(0,0,0,0.25);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 8px 8px 0;
+            padding: 18px 20px;
+        }
+
+        .info-card p {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 5px 0 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            word-break: break-all;
+        }
+
+        .ip-note {
+            margin-top: 15px;
+            background: rgba(52, 152, 219, 0.12);
+            border: 1px dashed var(--info-color);
+            border-radius: 8px;
+            padding: 14px 18px;
+            font-size: 0.92rem;
+        }
+
+        .ip-note strong { color: var(--info-color); }
+
+        /* 玩法介绍 */
+        .feature-list { list-style: none; padding-left: 0; margin: 0; }
+
+        .feature-list li {
+            background: rgba(0,0,0,0.25);
+            border-left: 4px solid var(--accent-color);
+            padding: 15px 18px;
+            margin-bottom: 14px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .feature-list li strong {
+            color: var(--accent-color);
+            margin-right: 6px;
+        }
+
+        .core-mech {
+            text-align: center;
+            background: rgba(231, 76, 60, 0.12);
+            border: 1px dashed var(--primary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0 20px;
+        }
+
+        .core-mech .big {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--danger-color);
+        }
+
+        /* 官网按钮 */
+        .cta-wrap {
+            text-align: center;
+            margin: 35px 0 10px;
+        }
+
+        .btn-official {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), #c0392b);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 16px 48px;
+            border-radius: 50px;
+            letter-spacing: 2px;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.45);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-official:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(231, 76, 60, 0.6);
+        }
+
+        .cta-sub {
+            margin-top: 12px;
+            color: #999;
+            font-size: 0.85rem;
+            word-break: break-all;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        footer a { color: var(--info-color); }
+
+        @media (max-width: 768px) {
+            section { padding: 25px 20px; }
+            .btn-official { padding: 14px 32px; font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部头图 -->
+    <div class="hero-wrap">
+        <img class="poster-hero" src="img/FESMP-视觉海报.png" alt="FESMP 生命窃取 SMP 服务器宣传海报">
+    </div>
+
+    <div class="container">
+
+        <div class="slogan">
+            ⚔️ 生命窃取 · 强者为王 ⚔️
+            <small>浅管理 · 无政府 · SMP 模式 · Java / 基岩双版本</small>
+        </div>
+
+        <!-- 服务器 IP -->
+        <section id="ip">
+            <h2>🖥️ 服务器地址</h2>
+            <div class="ip-grid">
+                <div class="info-card">
+                    <h3>Java 版连接</h3>
+                    <p>9666.fun:23178</p>
+                </div>
+                <div class="info-card">
+                    <h3>基岩版连接</h3>
+                    <p>IP: 9666.fun · 端口: 23178</p>
+                </div>
+            </div>
+            <div class="ip-note">
+                💡 <strong>填法提示：</strong>JAVA 版地址栏整串填入（含冒号和端口）；基岩版 IP 与端口分开填 —— 冒号左边填 IP，冒号右边填端口。
+            </div>
+        </section>
+
+        <!-- 玩法介绍 -->
+        <section id="gameplay">
+            <h2>🎮 主要玩法</h2>
+            <div class="core-mech">
+                <div class="big">❤️ 击杀玩家 · 窃取一点血量（半颗心）</div>
+                <div style="margin-top: 6px; color: #bbb;">弱肉强食，请自行掂量 —— 活下来，或是成为别人的血包。</div>
+            </div>
+            <ul class="feature-list">
+                <li><strong class="tag">【模式】</strong><strong>浅管理 · 无政府 SMP：</strong>除三条红线协议外无其他规则，战争、结盟、背叛、偷窃、陷阱均由玩家自行解决，管理员不予干预。</li>
+                <li><strong class="tag">【生存】</strong><strong>原版生存为核心：</strong>资源、领地、装备全靠双手打拼，每一次击杀都可能让你变强或失去一切。</li>
+                <li><strong class="tag">【互通】</strong><strong>Java / 基岩双版本：</strong>电脑与手机玩家同服游玩，随时随地开黑。</li>
+                <li><strong class="tag">【辅助】</strong><strong>完善的基础插件：</strong>传送（/tpa）、回家（/home）、皮肤（/skin）、套件（/kit）等常用指令一应俱全。</li>
+            </ul>
+        </section>
+
+        <!-- 红线提醒 -->
+        <section id="redline">
+            <h2>🚫 三条红线（进服必读）</h2>
+            <ul class="feature-list">
+                <li><strong>① </strong>禁止出生点附近杀人、禁止一切外挂与影响服务器发包的 Mod。第一次警告，第二次飞机票！</li>
+                <li><strong>② </strong>禁止恶意卡服：高频红石、过量堆叠实体、DDOS 攻击等导致卡顿 / 崩溃的行为。</li>
+                <li><strong>③ </strong>禁止现实恶意、人身威胁、人肉搜索、泄露现实地址及涉政涉恐等违规言论。</li>
+            </ul>
+        </section>
+
+        <!-- 官网跳转按钮 -->
+        <div class="cta-wrap">
+            <a class="btn-official" href="https://l-love-china.github.io/FE.github.io/index.html" target="_blank" rel="noopener">
+                🌐 进入服务器官网
+            </a>
+            <div class="cta-sub">官网地址：https://l-love-china.github.io/FE.github.io/</div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 FESMP Server. All Rights Reserved. 🩸 活下来，或是成为别人的血包。<br>
+        <a href="gonggao.html">群公告（必读）</a> · <a href="index.html">服务器主页</a>
+    </footer>
+
+</body>
+</html>

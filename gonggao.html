@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FESMP - 群公告（必读）</title>
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --accent-color: #f1c40f;
+            --danger-color: #ff4d4d;
+            --success-color: #2ecc71;
+            --info-color: #3498db;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=minecraft+landscape+epic+castle+cinematic&image_size=landscape_16_9');
+            background-size: cover;
+            background-position: center;
+            padding: 70px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            letter-spacing: 5px;
+        }
+
+        header .sub {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .must-read {
+            display: inline-block;
+            background: var(--danger-color);
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 15px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.85; }
+        }
+
+        .container {
+            max-width: 950px;
+            margin: -40px auto 50px;
+            padding: 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 35px 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--info-color);
+            word-break: break-all;
+        }
+
+        a:hover { color: #5dade2; }
+
+        .notice-list { padding-left: 0; list-style: none; }
+
+        .notice-list li {
+            background: rgba(0,0,0,0.25);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 18px;
+            margin-bottom: 14px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .notice-list li strong.tag {
+            color: var(--accent-color);
+            margin-right: 6px;
+        }
+
+        .warn-box {
+            background: rgba(255, 77, 77, 0.12);
+            border: 1px dashed var(--danger-color);
+            border-radius: 8px;
+            padding: 18px 22px;
+            color: var(--danger-color);
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .tip-box {
+            background: rgba(52, 152, 219, 0.12);
+            border: 1px dashed var(--info-color);
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin: 15px 0;
+        }
+
+        .ok-box {
+            background: rgba(46, 204, 113, 0.1);
+            border: 1px dashed var(--success-color);
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin: 15px 0;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .links-grid { grid-template-columns: 1fr; }
+            section { padding: 25px 20px; }
+        }
+
+        .link-card {
+            background: rgba(0,0,0,0.25);
+            border-radius: 8px;
+            padding: 18px 20px;
+            border: 1px solid #444;
+        }
+
+        .link-card h3 { margin-top: 0; }
+
+        .ip-demo {
+            font-family: 'Courier New', Courier, monospace;
+            background: #171717;
+            color: var(--accent-color);
+            padding: 15px 18px;
+            border-radius: 6px;
+            margin: 12px 0;
+            font-size: 1rem;
+            overflow-x: auto;
+        }
+
+        .ip-demo .hl { color: var(--danger-color); font-weight: bold; }
+        .ip-demo .hp { color: var(--success-color); font-weight: bold; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #444;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: var(--primary-color);
+        }
+
+        tr:hover { background-color: rgba(255,255,255,0.05); }
+
+        ol li { margin-bottom: 10px; }
+
+        .back-home {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FESMP · 群公告</h1>
+        <p class="sub">⚠️ 每一条公告都有用 · 进群必读 ⚠️</p>
+        <span class="must-read">所有人必须看完本页</span>
+    </header>
+
+    <div class="container">
+
+        <a class="back-home" href="index.html">← 返回服务器官网</a>
+
+        <!-- 公告列表 -->
+        <section id="notices">
+            <h2>📢 群公告列表</h2>
+            <ul class="notice-list">
+                <li><strong class="tag">【必读】</strong>群公告<strong>每个人必须看</strong>。请逐条阅读下方所有公告，每一条都很有用。</li>
+                <li><strong class="tag">【官网】</strong>服务器官网：<a href="https://l-love-china.github.io/FE.github.io/index.html" target="_blank" rel="noopener">https://l-love-china.github.io/FE.github.io/index.html</a></li>
+                <li><strong class="tag">【IP】</strong>不要在群里问 IP！服务器地址就写在群规则文档里，仔细看，里面大概怎么填都写清楚了。</li>
+                <li><strong class="tag">【回放】</strong>建议每个人都安装<strong>回放模组（Replay Mod）</strong>。如果管理员没有看到的外挂或违规情况，请使用回放模组录像后进行举报。</li>
+                <li><strong class="tag">【重生锚】</strong>服务器目前<strong>禁用重生锚</strong>。重生锚可以当做纪念摆放，但不可使用 —— 它实在是太恶心了，一下去合金套就没了。</li>
+                <li><strong class="tag">【昵称】</strong>记得把<strong>群昵称改成游戏内名字</strong>，方便管理组找玩家、处理事务。</li>
+                <li><strong class="tag">【举报】</strong>外挂举报请<strong>私信管理员</strong>，不要在群里公开发包信息。</li>
+                <li><strong class="tag">【责任】</strong>如果因为<strong>没看群公告</strong>导致的装备丢失、封禁等问题，<strong>管理组概不负责</strong>。</li>
+            </ul>
+            <div class="warn-box">⚠️ 未看公告造成的任何损失，后果自负！</div>
+        </section>
+
+        <!-- 重要文档 -->
+        <section id="docs">
+            <h2>📄 重要文档（含 IP）</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <h3>🛡️ 群规则（含服务器 IP）</h3>
+                    <p>服务器地址、填写方式都在这份文档里，进服前务必先看。</p>
+                    <p><a href="https://docs.qq.com/doc/DRXFoemdpaHppZ3ND" target="_blank" rel="noopener">https://docs.qq.com/doc/DRXFoemdpaHppZ3ND</a></p>
+                </div>
+                <div class="link-card">
+                    <h3>🧩 权限组与插件备选名单</h3>
+                    <p>服务器权限组说明与可用插件 / 指令备选名单。</p>
+                    <p><a href="https://docs.qq.com/doc/DRVB2cFpzWFBudXVR" target="_blank" rel="noopener">https://docs.qq.com/doc/DRVB2cFpzWFBudXVR</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Java / 基岩版进入方式 -->
+        <section id="ip-guide">
+            <h2>🖥️ JAVA 版与基岩版进入方式区别</h2>
+            <p>很多玩家搞不清两个版本的地址填法，其实很简单 —— 群规则里的地址形如 <strong>域名:端口</strong>，冒号左边是域名（解析出来就是 IP），右边是端口号。</p>
+            <div class="ip-demo">
+                示例地址：<span class="hl">9666.fun</span>:<span class="hp">23178</span><br>
+                <span class="hl">冒号左边 = 域名 / IP</span>　<span class="hp">冒号右边 = 端口号</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>版本</th>
+                        <th>填写方式</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>JAVA 版</strong></td>
+                        <td>只有一个地址栏</td>
+                        <td>地址栏要<strong>同时包含 IP 和端口</strong>，即填 <strong>冒号左边:冒号右边</strong> 的完整形式。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>基岩版</strong></td>
+                        <td>IP 与端口分开填</td>
+                        <td><strong>IP 一栏填冒号左边</strong>（域名解析出来是 IP），<strong>端口一栏填冒号右边</strong>。</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="tip-box">💡 简单记：JAVA 版整串一起填；基岩版拆开 —— 左边填 IP，右边填端口。</div>
+        </section>
+
+        <!-- 服务器协议 -->
+        <section id="protocol">
+            <h2>⚔️ 欢迎来到本 SMP 服务器</h2>
+            <p>本服务器为<strong>浅管理、无政府服务器</strong>，采用 SMP 模式。请务必遵守以下协议：</p>
+            <ol>
+                <li><strong>禁止在出生点附近杀人</strong>（包括阻止玩家离开出生点）；<strong>禁止使用任何外挂</strong>（包括杀戮光环、飞行、加速、自动搭路、自动瞄准、矿透等作弊行为）。影响服务器发包的工具（Mod）均视为作弊。<br>
+                <span style="color: var(--danger-color); font-weight: bold;">处罚：第一次警告，第二次飞机票！</span></li>
+                <li><strong>禁止恶意卡服</strong>，包括建造高频红石、过量堆叠实体生物、DDOS 攻击及任何故意导致服务器崩溃、卡顿的行为。</li>
+                <li><strong>禁止现实恶意、人身威胁、人肉搜索、泄露现实地址</strong>，以及发表涉政、涉恐、反动等违规言论，共同维护绿色网络环境。</li>
+            </ol>
+            <div class="ok-box">
+                ✅ <strong>除上述条款外，本服务器无其他规则。</strong>玩家间一切行为（战争、结盟、背叛、偷窃、破坏、设陷阱等），均由玩家自行解决，管理员不予干预。<br>
+                ⚠️ 未遵守上述要求，后果自负。
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 FESMP Server. All Rights Reserved. 🩸 活下来，或是成为别人的血包。<br>
+        <a href="haibao.html">宣传海报</a> · <a href="https://l-love-china.github.io/FE.github.io/index.html" target="_blank" rel="noopener">官网地址</a>
+    </footer>
+
+</body>
+</html>
