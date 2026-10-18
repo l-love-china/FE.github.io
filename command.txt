@@ -1,0 +1,42 @@
+服务器权限组与插件备选名单
+/afk 标记你离开了键盘
+/tnt 给玩家一点点惊喜（op）
+/anvil 打开铁砧
+/backup 备份（op）
+/book 解放书籍
+/bc 广播
+/burn 点燃你op
+/ck 创建kit
+deljail 删除一所监狱op
+delkit删除一个套件
+delwarp 删除一个地标
+depth 海拔是多少呢？
+eco 管理服务器的经济
+feed满足饥饿
+fly 妈妈桑起飞喽
+gc 报告服务器内存
+god 让你获得耶稣的力量
+helppop 求助管理员啊，我死了
+ice 你给我冷静啊啊啊啊啊啊啊
+/invsee 查看你的背包
+/itemdb搜索一个物品
+/jailedplayers 查看监狱封禁的玩家
+/getpos 获取坐标
+jails 列出所有的监狱
+kit获取可用套件
+mail 服务器内发邮件
+motd查看信息
+near 最近玩家
+nick 更改名字
+ptime 查看时间
+ruls查看规定
+setjail 设置监狱
+speed 速度
+jail关进小黑屋
+
+
+
+
+
+
+
